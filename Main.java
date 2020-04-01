@@ -45,7 +45,7 @@ class Main {
             // calculate report
             totalGames += 1;
             totalGuesses += guessCnt;
-            ratioGuessGame = totalGuesses / totalGames;
+            ratioGuessGame = (double)totalGuesses / totalGames;
             bestGame = Math.min(bestGame, guessCnt);
 
         } while (isContinue(scanner));
@@ -57,7 +57,7 @@ class Main {
         System.out.println("Overall result:");
         System.out.println("Total games   = " + totalGames);
         System.out.println("Total guesses = " + totalGuesses);
-        System.out.println("Guesses/games = " + ratioGuessGame);
+        System.out.println("Guesses/games = " + String.format("%.1f", ratioGuessGame));
         System.out.println("Best games    = " + bestGame);
     }
 
